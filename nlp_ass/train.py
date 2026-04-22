@@ -6,7 +6,7 @@ import spacy
 from sklearn.feature_extraction.text import CountVectorizer
 
 
-df = pd.read_json(r"D:\excel\NLP\News_Category_Dataset_v3.json",lines=True)
+df = pd.read_json(News_Category_Dataset_v3.json",lines=True)
 st.dataframe(df.head(20))
 
 keep_categories = ["TECH", "ENTERTAINMENT", "POLITICS", "BUSINESS"]
@@ -68,7 +68,7 @@ vectorizer = CountVectorizer(
 X = vectorizer.fit_transform(filtered_df["clean_headline"])
 
 # Save vectorizer
-joblib.dump(vectorizer, r"D:\nlp_assesment\count_vectorizer.pkl")
+joblib.dump(vectorizer,count_vectorizer.pkl")
 st.write("save vectorizer model")
 
 y = filtered_df["category"]
@@ -108,7 +108,7 @@ log_reg = LogisticRegression(
 # Train the model
 log_reg.fit(X_train, y_train)
 
-joblib.dump(log_reg, r"D:\nlp_assesment\news_category_model.pkl")
+joblib.dump(log_reg, news_category_model.pkl")
 st.write("save logistic regression model")
 
 #10)Test the model and report accuracy
