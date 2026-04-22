@@ -3,3 +3,5 @@ numpy
 re
 spacy
 joblib
+streamlit
+scikit-learn
