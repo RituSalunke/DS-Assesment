@@ -3,8 +3,8 @@ import joblib
 import re
 
 # Load saved model and vectorizer
-model = joblib.load("news_category_model.pkl")
-vectorizer = joblib.load("count_vectorizer.pkl")
+model = joblib.load(news_category_model.pkl)
+vectorizer = joblib.load(count_vectorizer.pkl)
 
 # Text preprocessing function (same as training)
 def preprocess_text(text):
